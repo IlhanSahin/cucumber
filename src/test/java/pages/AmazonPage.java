@@ -8,21 +8,17 @@ import utilities.Driver;
 public class AmazonPage {
 
     public AmazonPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    //amaozndaki arama kutusu lokcate edelim
 
-    @FindBy(id ="twotabsearchtextbox")
+    // amazondaki arama kutusunu locate edelim
+    @FindBy(id="twotabsearchtextbox")
     public WebElement aramaKutusu;
 
-    @FindBy(xpath = "//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]")
+    @FindBy(xpath="//div[@class=\"a-section a-spacing-small a-spacing-top-small\"]")
     public WebElement aramaSonucElementi;
 
     @FindBy(xpath = "//select[@title='Search in']")
-    public WebElement dropDownMenu;
-
-
-
-
+    public WebElement dropdownMenu;
 }
-
