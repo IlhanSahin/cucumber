@@ -1,4 +1,4 @@
-@myCourse
+@pt1
 Feature: US1007 Yanlis Bilgilerle Giris yapilamaz
 
   # 3 farkli senaryo ile negatif login testi yapalim

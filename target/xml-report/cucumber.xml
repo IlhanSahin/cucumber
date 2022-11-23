@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.517">
-    <testcase classname="US1011 Automation Practice kullanici Olusturma testi" name="TC18 kullanici yeni kullanici oluturabilmeli" time="0.054">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given Kullanici "automationUrl" anasayfaya gider............................passed
-And user signUp linkine tiklar..............................................undefined
-And New user bölümüne name ve email adresi girer............................skipped
-And SignUp butonuna basar...................................................skipped
-And user kisisel bilgilerini ve iletisim bilgilerini girer..................skipped
-And user Register butonuna basar............................................skipped
-Then hesap olustugunu dogrulayin............................................skipped
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.918">
+    <testcase classname="JDBC kullanarak yeterli bilgi ile database testi yapilabilir" name="JDBC01 kullanici database'de sorgu yapabilmeli" time="2.613">
+        <system-out>
+            <![CDATA[Given Kullanici JDBC ile database'e baglanir................................passed
+Then users tablosundaki isim verilerini alir................................passed
+And isim verilerini test eder...............................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

@@ -1,7 +1,7 @@
 
 Feature: US1001 Amazon arama testi
 
-
+@pt1
   Scenario: TC01 Kullanici Amazonda arama yapabilmeli
 
     Given Kullanici amazon anasayfaya gider
