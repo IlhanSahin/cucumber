@@ -1,4 +1,4 @@
-package databaseStepdefinitions;
+package dataBaseStepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -38,6 +38,7 @@ public class UsersStepdefinitions {
     public void kullanici_jdbc_ile_database_e_baglanir() throws SQLException {
         connection= DriverManager.getConnection(url,username,password);
         statement= connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+
     }
     @Then("users tablosundaki isim verilerini alir")
     public void users_tablosundaki_isim_verilerini_alir() throws SQLException {
@@ -96,5 +97,38 @@ public class UsersStepdefinitions {
             System.out.println(siraNo+"-"+resultSet.getString("first_name"));
             siraNo++;
         }
+    }
+
+
+
+
+
+    @Then("id si {int} olan kisinin {string} degerinin {string} oldugunu test eder")
+    public void idSiOlanKisininDegerininOldugunuTestEder(int id, String last_name, String verilenDeger) throws SQLException {
+        // Id'si 14 olan user'in  "last_name" degerini getir
+        // SELECT last_name FROM users WHERE id=14
+        //String query="SELECT last_name FROM users";
+        String query= "SELECT "+last_name+" FROM users WHERE id="+id;
+
+        resultSet=statement.executeQuery(query);
+        resultSet.first();
+        String actualSoyisim= resultSet.getString("last_name");
+
+        Assert.assertEquals(verilenDeger,actualSoyisim);
+    }
+
+    @Then("id degeri {int} olan kisinin {string} degerini {string} yapar")
+    public void idDegeriOlanKisininDegeriniYapar(int id, String fieldName, String istenenDeger)  {
+
+        String query= "UPDATE users SET "+fieldName+"='"+istenenDeger+"' WHERE id="+id+";";
+
+
+        try {
+            statement.executeQuery(query);
+        } catch (SQLException e) {
+            System.out.println("Yapilan sorgu ResultSet döndürmüyor");
+        }
+
+
     }
 }

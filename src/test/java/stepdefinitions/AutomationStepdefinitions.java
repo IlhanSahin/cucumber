@@ -18,8 +18,8 @@ public class AutomationStepdefinitions {
     }
     @Given("New user bölümüne name ve email adresi girer")
     public void new_user_bölümüne_name_ve_email_adresi_girer() {
-        automationPage.isimKutusu.sendKeys("Arkan");
-        automationPage.emailKutusu.sendKeys("gbhnhjm8h09ghdj@gmail.com");
+        automationPage.isimKutusu.sendKeys("Ahmet1");
+        automationPage.emailKutusu.sendKeys("gbhnhjmjhghdj@gmail.com");
     }
     @Given("SignUp butonuna basar")
     public void sign_up_butonuna_basar() {
@@ -77,8 +77,8 @@ public class AutomationStepdefinitions {
     }
     @Then("hesap olustugunu dogrulayin")
     public void hesap_olustugunu_dogrulayin() {
-
         Assert.assertTrue(automationPage.createAccountButonu.isDisplayed());
     }
 
 }
+
