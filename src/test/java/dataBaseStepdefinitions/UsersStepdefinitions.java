@@ -50,6 +50,7 @@ public class UsersStepdefinitions {
 
         String query="SELECT first_name FROM users";
         resultSet=statement.executeQuery(query);
+//        resultSet=statement.executeUpdate(query);
     }
     @Then("isim verilerini test eder")
     public void isim_verilerini_test_eder() throws SQLException {

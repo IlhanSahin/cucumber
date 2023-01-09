@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class AutomationPage {
     public AutomationPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
